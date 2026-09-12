@@ -148,7 +148,7 @@ export const OTHER_PROJECTS: Project[] = [
     githubUrl: "#",
     iconName: "Award",
     color: "text-border-accent",
-    image: "../src/assets/projects/hismaya-cahaya.png",
+    image: "../../src/assets/projects/hismaya-cahaya.png",
   },
   {
     id: "proj-lsp",
