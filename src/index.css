@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0b1514;
+  --color-surface: #0b1514;
+  --color-surface-container: #172120;
+  --color-surface-container-low: #131d1c;
+  --color-surface-container-lowest: #06100f;
+  --color-surface-container-high: #222c2b;
+  --color-surface-container-highest: #2c3735;
+  --color-surface-variant: #2c3735;
+  --color-bg-card: #101E1D;
+  --color-bg-secondary: #0D1918;
+  --color-nav-glass: rgba(13, 25, 24, 0.85);
+
+  --color-primary: #71ffef;
+  --color-primary-fixed: #40fbea;
+  --color-primary-fixed-dim: #00dece;
+  --color-primary-container: #00e5d4;
+  --color-secondary: #48f7ec;
+  --color-secondary-fixed: #4cfaee;
+  --color-border-accent: #00E5D4;
+  --color-border-subtle: #263433;
+  --color-glow-cyan: rgba(0, 229, 212, 0.25);
+
+  --color-text-primary: #F5F7F7;
+  --color-text-secondary: #A7B2B1;
+  --color-text-muted: #6F7B7A;
+  --color-on-surface: #dae5e3;
+  --color-on-surface-variant: #b9cac6;
+  --color-on-primary-container: #00625a;
+  --color-tertiary: #ffe6be;
+  --color-tertiary-fixed-dim: #f8bd45;
+
+  --font-display: 'Montserrat', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border-subtle);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-on-surface);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0b1514;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #263433;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00E5D4;
+  }
+}
+
+/* Custom glow utility */
+.glow-cyan-sm {
+  box-shadow: 0 0 12px rgba(0, 229, 212, 0.2);
+}
+
+.glow-cyan-md {
+  box-shadow: 0 0 20px rgba(0, 229, 212, 0.28);
+}
+
+.glow-cyan-lg {
+  box-shadow: 0 0 35px rgba(0, 229, 212, 0.35);
+}
+
+.glow-cyan-border {
+  border-color: #00E5D4;
+  box-shadow: 0 0 15px rgba(0, 229, 212, 0.25);
+}

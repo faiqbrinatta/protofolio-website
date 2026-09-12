@@ -1,0 +1,2214 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#00dece",
+              "primary-fixed": "#40fbea",
+              "secondary-container": "#00dbcf",
+              surface: "#0b1514",
+              "on-tertiary-fixed-variant": "#5e4200",
+              "tertiary-fixed": "#ffdea7",
+              "on-background": "#dae5e3",
+              "surface-container": "#172120",
+              "glow-cyan": "rgba(0, 229, 212, 0.25)",
+              "surface-variant": "#2c3735",
+              primary: "#71ffef",
+              "secondary-fixed": "#4cfaee",
+              "on-primary": "#003732",
+              "on-primary-container": "#00625a",
+              background: "#0b1514",
+              "on-surface-variant": "#b9cac6",
+              "on-secondary-fixed-variant": "#00504b",
+              "on-tertiary-container": "#725100",
+              "on-secondary": "#003734",
+              "inverse-on-surface": "#283231",
+              "surface-container-low": "#131d1c",
+              "outline-variant": "#3b4a47",
+              "surface-container-lowest": "#06100f",
+              "text-muted": "#6F7B7A",
+              "border-subtle": "#263433",
+              "nav-glass": "rgba(13, 25, 24, 0.85)",
+              "inverse-surface": "#dae5e3",
+              error: "#ffb4ab",
+              tertiary: "#ffe6be",
+              "on-secondary-container": "#005b56",
+              "surface-dim": "#0b1514",
+              secondary: "#48f7ec",
+              "tertiary-fixed-dim": "#f8bd45",
+              "on-surface": "#dae5e3",
+              "on-secondary-fixed": "#00201e",
+              "on-tertiary-fixed": "#271900",
+              "surface-tint": "#00dece",
+              "text-secondary": "#A7B2B1",
+              "tertiary-container": "#ffc34b",
+              "secondary-fixed-dim": "#0eddd2",
+              "inverse-primary": "#006a62",
+              "surface-container-highest": "#2c3735",
+              "border-accent": "#00E5D4",
+              "surface-bright": "#313b3a",
+              "on-primary-fixed-variant": "#005049",
+              "on-tertiary": "#412d00",
+              "error-container": "#93000a",
+              "bg-secondary": "#0D1918",
+              "on-error-container": "#ffdad6",
+              "text-primary": "#F5F7F7",
+              "on-error": "#690005",
+              "primary-container": "#00e5d4",
+              "on-primary-fixed": "#00201d",
+              outline: "#849491",
+              "bg-card": "#101E1D",
+              "surface-container-high": "#222c2b",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "space-2xl": "48px",
+              "space-xl": "32px",
+              "space-sm": "8px",
+              "space-xs": "4px",
+              "space-section-desktop": "112px",
+              "container-max-width": "1200px",
+              "space-3xl": "64px",
+              "space-section-mobile": "72px",
+              "space-lg": "24px",
+              "space-md": "16px",
+            },
+            fontFamily: {
+              "body-small": ["Inter"],
+              "display-hero": ["Montserrat"],
+              "display-hero-mobile": ["Montserrat"],
+              "headline-section-mobile": ["Montserrat"],
+              "headline-section": ["Montserrat"],
+              "body-medium": ["Inter"],
+              "title-card": ["Montserrat"],
+              "body-large": ["Inter"],
+              "display-hero-tablet": ["Montserrat"],
+              "label-nav": ["Inter"],
+              "label-code": ["Inter"],
+            },
+            fontSize: {
+              "body-small": ["14px", { lineHeight: "22px", fontWeight: "400" }],
+              "display-hero": [
+                "64px",
+                {
+                  lineHeight: "76px",
+                  letterSpacing: "-0.03em",
+                  fontWeight: "800",
+                },
+              ],
+              "display-hero-mobile": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-section-mobile": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-section": [
+                "32px",
+                {
+                  lineHeight: "40px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-medium": [
+                "16px",
+                { lineHeight: "26px", fontWeight: "400" },
+              ],
+              "title-card": [
+                "20px",
+                {
+                  lineHeight: "28px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-large": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "display-hero-tablet": [
+                "46px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.025em",
+                  fontWeight: "800",
+                },
+              ],
+              "label-nav": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "label-code": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background font-body-medium text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"
+  >
+    <header
+      class="fixed top-0 left-0 right-0 z-50 flex items-center justify-center pt-4 px-4"
+    >
+      <div
+        class="h-16 w-full max-w-container-max-width bg-nav-glass backdrop-blur-md border border-border-subtle rounded-full px-6 flex items-center justify-between shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+      >
+        <div class="flex items-center gap-3">
+          <img
+            alt="FZ Monogram Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1XufYM49HHWHlhZn7z3EcRqte4u1p_Y8gVYjRQh02rEqm2RKpS-uPga-7EODACevqX6WN72Ih5U2iP3ytXwyYaRAiy-D243gzHxOKffPt8TPuUB0Wv5aHKa4d-ag9eeAkvwvT2vHeix9XTGEItXuO4MaUXDNQluEjflPyr3hZYyrZxIjo70EN_e0eP8yLkl68RlertI9y93QKdTl7fFCjA_WF3JAILrUm_2ncbfbdzsiHDVc2l02azX"
+          /><a class="flex flex-col" data-path="home" href="#"
+            ><span
+              class="font-title-card text-title-card text-text-primary tracking-tight font-bold"
+              >FZ<span class="text-border-accent">.DEV</span></span
+            ><span
+              class="font-label-code text-label-code text-text-muted hidden sm:inline-block tracking-wider uppercase"
+              >Fa'iq Zhafran</span
+            ></a
+          >
+        </div>
+        <nav
+          class="hidden lg:flex items-center gap-6 font-label-nav text-label-nav"
+          data-active-classes="text-primary border-b border-primary shadow-[0_0_12px_rgba(0,229,212,0.25)] font-semibold"
+        >
+          <a
+            aria-current="page"
+            class="transition-colors py-1 text-primary border-b border-primary shadow-[0_0_12px_rgba(0,229,212,0.25)] font-semibold"
+            data-path="home"
+            href="#"
+            >Home</a
+          ><a
+            class="text-on-surface-variant hover:text-on-surface transition-colors py-1"
+            data-path="about"
+            href="#"
+            >About</a
+          ><a
+            class="text-on-surface-variant hover:text-on-surface transition-colors py-1"
+            data-path="experience"
+            href="#"
+            >Experience</a
+          ><a
+            class="text-on-surface-variant hover:text-on-surface transition-colors py-1"
+            data-path="projects"
+            href="#"
+            >Projects</a
+          ><a
+            class="text-on-surface-variant hover:text-on-surface transition-colors py-1"
+            data-path="certificate"
+            href="#"
+            >Certificate</a
+          ><a
+            class="text-on-surface-variant hover:text-on-surface transition-colors py-1"
+            data-path="contact"
+            href="#"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <a
+            class="hidden sm:inline-flex items-center justify-center px-5 py-2 rounded-full border border-border-accent text-border-accent hover:bg-border-accent hover:text-on-primary-container transition-all duration-200 font-label-nav text-label-nav shadow-[0_0_12px_rgba(0,229,212,0.15)] hover:shadow-[0_0_16px_rgba(0,229,212,0.35)]"
+            data-path="contact"
+            href="#"
+            >Hire Me</a
+          >
+          <div
+            class="h-8 w-8 rounded-full border border-border-subtle p-0.5 flex items-center justify-center"
+          >
+            <img
+              alt="Profile"
+              class="w-8 h-8 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP6TyCcL2xKU--OWUsVGTGUnKgcqc4zindOjwlaDULgbLhH3yz-lUsEjp0AcUGlpMKTZn-22oupNe67lPDGmAnsDKra9HL9IdkU-MmZeVzyOBXXYyeh98OWJsERlCVLLaHDzrjQZ9XO9ndf651g173ngKY-cCRrxcA4QnBVZ_kfBCERMQR1rk3OTYDb3ZwgL0Ew8uziH2rZlsGdhQeMTrSDG3hW34qUCGf1Ms_IdWb_70hpRYALjo"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-16 bg-background">
+      <div class="flex flex-col w-full">
+        <!-- SECTION 02: HERO SECTION -->
+        <section
+          class="relative w-full max-w-container-max-width mx-auto px-6 py-space-xl lg:py-space-section-desktop flex flex-col justify-center"
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center"
+          >
+            <!-- 55% Content (7 cols) -->
+            <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+              <!-- Label Badge -->
+              <div
+                class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container-low shadow-[0_0_12px_rgba(0,229,212,0.15)]"
+              >
+                <span
+                  class="w-2 h-2 rounded-full bg-border-accent animate-ping"
+                ></span>
+                <span
+                  class="font-label-code text-label-code text-border-accent uppercase tracking-widest"
+                  >FRONTEND DEVELOPER • UI/UX ENTHUSIAST</span
+                >
+              </div>
+              <!-- Main Heading -->
+              <h1
+                class="font-display-hero text-display-hero-tablet lg:text-display-hero text-text-primary tracking-tight font-extrabold uppercase"
+              >
+                Fa'iq Zhafran<br />
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary-fixed to-primary-container"
+                  >Naufal Brinatta.</span
+                >
+              </h1>
+              <!-- Subtitle -->
+              <p
+                class="font-title-card text-title-card text-text-secondary font-medium"
+              >
+                Frontend Web Developer &amp; UI/UX Enthusiast
+              </p>
+              <!-- Description -->
+              <p
+                class="font-body-large text-body-large text-text-muted max-w-xl leading-relaxed"
+              >
+                Fresh graduate Informatics Engineering with experience in
+                frontend web development, project management, and digital
+                product development. Focused on building clean, responsive, and
+                user-friendly web applications.
+              </p>
+              <!-- CTAs -->
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a
+                  class="inline-flex items-center justify-center px-7 py-3 rounded-full text-border-accent shadow-[0_0_12px_rgba(0,229,212,0.2)] hover:bg-border-accent hover:text-on-primary-container transition-all duration-200 font-label-nav text-label-nav group"
+                  href="#projects"
+                >
+                  <span>[ View Projects ]</span>
+                  <span
+                    class="material-symbols-outlined ml-2 text-base transition-transform group-hover:translate-x-1"
+                    >arrow_forward</span
+                  >
+                </a>
+                <a
+                  class="inline-flex items-center justify-center px-7 py-3 rounded-full bg-surface-container text-text-primary hover:text-border-accent transition-all duration-200 font-label-nav text-label-nav"
+                  href="#contact"
+                >
+                  <span>[ Download CV ]</span>
+                  <span class="material-symbols-outlined ml-2 text-base"
+                    >download</span
+                  >
+                </a>
+              </div>
+              <!-- Social Links -->
+              <div class="flex items-center gap-6 pt-4 text-text-muted">
+                <span
+                  class="font-label-code text-label-code uppercase tracking-wider text-text-secondary"
+                  >Connect:</span
+                >
+                <a
+                  class="flex items-center gap-1.5 font-label-nav text-label-nav hover:text-border-accent hover:-translate-y-0.5 transition-all"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined text-lg"
+                    >terminal</span
+                  >
+                  <span>GitHub</span>
+                </a>
+                <a
+                  class="flex items-center gap-1.5 font-label-nav text-label-nav hover:text-border-accent hover:-translate-y-0.5 transition-all"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined text-lg">share</span>
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  class="flex items-center gap-1.5 font-label-nav text-label-nav hover:text-border-accent hover:-translate-y-0.5 transition-all"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined text-lg"
+                    >photo_camera</span
+                  >
+                  <span>Instagram</span>
+                </a>
+                <a
+                  class="flex items-center gap-1.5 font-label-nav text-label-nav hover:text-border-accent hover:-translate-y-0.5 transition-all"
+                  href="mailto:faiq.zhafran@example.com"
+                >
+                  <span class="material-symbols-outlined text-lg">mail</span>
+                  <span>Email</span>
+                </a>
+              </div>
+            </div>
+            <!-- 45% Visual (5 cols) -->
+            <div class="lg:col-span-5 flex justify-center relative">
+              <!-- Ambient decorative backdrop glow -->
+              <div
+                class="absolute -inset-4 bg-gradient-to-tr from-primary-container/20 to-transparent blur-2xl rounded-3xl -z-10 pointer-events-none"
+              ></div>
+              <div
+                class="relative w-full max-w-md bg-bg-card rounded-2xl p-4 shadow-[0_16px_40px_rgba(0,0,0,0.6)]"
+              >
+                <!-- Terminal / High-tech Chrome header -->
+                <div
+                  class="flex items-center justify-between pb-3 px-1 text-text-muted"
+                >
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="w-3 h-3 rounded-full bg-surface-variant"
+                    ></span>
+                    <span
+                      class="w-3 h-3 rounded-full bg-surface-variant"
+                    ></span>
+                    <span
+                      class="w-3 h-3 rounded-full bg-surface-variant"
+                    ></span>
+                  </div>
+                  <div
+                    class="flex items-center gap-1.5 font-label-code text-label-code text-text-secondary"
+                  >
+                    <span
+                      class="material-symbols-outlined text-sm text-border-accent"
+                      >terminal</span
+                    >
+                    <span>architect_node.ts</span>
+                  </div>
+                  <div class="w-3"></div>
+                </div>
+                <!-- Developer Photo Frame -->
+                <div
+                  class="relative aspect-square w-full rounded-xl overflow-hidden bg-surface-container-low group"
+                >
+                  <img
+                    alt="Fa'iq Zhafran Naufal Brinatta - Frontend Developer"
+                    class="w-full h-full object-cover object-center grayscale contrast-125 transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP6TyCcL2xKU--OWUsVGTGUnKgcqc4zindOjwlaDULgbLhH3yz-lUsEjp0AcUGlpMKTZn-22oupNe67lPDGmAnsDKra9HL9IdkU-MmZeVzyOBXXYyeh98OWJsERlCVLLaHDzrjQZ9XO9ndf651g173ngKY-cCRrxcA4QnBVZ_kfBCERMQR1rk3OTYDb3ZwgL0Ew8uziH2rZlsGdhQeMTrSDG3hW34qUCGf1Ms_IdWb_70hpRYALjo"
+                  />
+                  <!-- Subtle cyan scanline vignette -->
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-bg-card via-transparent to-transparent opacity-80 pointer-events-none"
+                  ></div>
+                  <div
+                    class="absolute inset-0 bg-primary/5 mix-blend-overlay pointer-events-none"
+                  ></div>
+                </div>
+                <!-- Code Snippet Tag Overlay -->
+                <div
+                  class="mt-4 p-3.5 rounded-xl bg-surface-container-lowest font-label-code text-label-code flex items-center justify-between"
+                >
+                  <div class="text-text-secondary truncate">
+                    <span class="text-border-accent">const</span> dev = {
+                    status:
+                    <span class="text-tertiary-fixed-dim">"open to work"</span>,
+                    role: <span class="text-primary-fixed">"Frontend"</span> };
+                  </div>
+                  <div
+                    class="flex items-center gap-1.5 pl-2 text-border-accent shrink-0"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-border-accent animate-pulse"
+                    ></span>
+                    <span>LIVE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 03: ABOUT ME -->
+        <section
+          class="w-full max-w-container-max-width mx-auto px-6 py-space-xl lg:py-space-section-desktop"
+          id="about"
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
+          >
+            <!-- Left Column: Profile Quick Info Card (5 cols) -->
+            <div class="lg:col-span-5">
+              <div
+                class="bg-bg-card rounded-2xl p-6 lg:p-8 flex flex-col items-center text-center relative shadow-xl"
+              >
+                <div
+                  class="relative w-36 h-36 rounded-2xl overflow-hidden mb-6 shadow-[0_0_24px_rgba(0,229,212,0.2)]"
+                >
+                  <img
+                    alt="Profile Avatar"
+                    class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP6TyCcL2xKU--OWUsVGTGUnKgcqc4zindOjwlaDULgbLhH3yz-lUsEjp0AcUGlpMKTZn-22oupNe67lPDGmAnsDKra9HL9IdkU-MmZeVzyOBXXYyeh98OWJsERlCVLLaHDzrjQZ9XO9ndf651g173ngKY-cCRrxcA4QnBVZ_kfBCERMQR1rk3OTYDb3ZwgL0Ew8uziH2rZlsGdhQeMTrSDG3hW34qUCGf1Ms_IdWb_70hpRYALjo"
+                  />
+                </div>
+                <h3
+                  class="font-title-card text-title-card text-text-primary font-bold"
+                >
+                  Fa'iq Zhafran Naufal Brinatta
+                </h3>
+                <p
+                  class="font-label-nav text-label-nav text-border-accent mt-1"
+                >
+                  Frontend Developer &amp; UI/UX
+                </p>
+                <div class="w-full my-6 bg-surface-variant h-px"></div>
+                <div
+                  class="w-full space-y-3.5 text-left font-body-small text-body-small"
+                >
+                  <div class="flex items-center justify-between py-1">
+                    <span class="text-text-muted flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-sm text-text-secondary"
+                        >location_on</span
+                      >
+                      Location
+                    </span>
+                    <span class="text-text-primary font-medium"
+                      >Malang, Indonesia</span
+                    >
+                  </div>
+                  <div class="flex items-center justify-between py-1">
+                    <span class="text-text-muted flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-sm text-text-secondary"
+                        >school</span
+                      >
+                      Degree
+                    </span>
+                    <span class="text-text-primary font-medium"
+                      >B.Eng Informatics (3.5 yrs)</span
+                    >
+                  </div>
+                  <div class="flex items-center justify-between py-1">
+                    <span class="text-text-muted flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-sm text-text-secondary"
+                        >mail</span
+                      >
+                      Email
+                    </span>
+                    <span
+                      class="text-text-primary font-medium truncate max-w-[160px]"
+                      >faiq.zhafran@example.com</span
+                    >
+                  </div>
+                </div>
+                <a
+                  class="mt-6 w-full py-3 rounded-xl bg-surface-container hover:bg-border-accent hover:text-on-primary-container text-text-primary font-label-nav text-label-nav transition-all duration-200 flex items-center justify-center gap-2"
+                  href="#contact"
+                >
+                  <span class="material-symbols-outlined text-lg"
+                    >download</span
+                  >
+                  <span>Download CV</span>
+                </a>
+              </div>
+            </div>
+            <!-- Right Column: Narrative (7 cols) -->
+            <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+              <div
+                class="inline-flex items-center gap-2 font-label-code text-label-code text-border-accent uppercase tracking-widest"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-border-accent"></span>
+                <span>ABOUT ME</span>
+              </div>
+              <h2
+                class="font-headline-section text-headline-section text-text-primary font-bold"
+              >
+                Passionate about building intuitive, performant digital
+                platforms.
+              </h2>
+              <div
+                class="space-y-4 font-body-large text-body-large text-text-secondary leading-relaxed"
+              >
+                <p>
+                  I'm
+                  <span class="text-text-primary font-medium"
+                    >Fa'iq Zhafran Naufal Brinatta</span
+                  >, a fresh graduate in Informatics Engineering from
+                  Universitas Negeri Malang with a strong interest in Frontend
+                  Web Development and UI/UX Design.
+                </p>
+                <p>
+                  I have experience developing websites using
+                  <span class="text-primary"
+                    >React, Next.js, Laravel, Tailwind CSS, and MySQL</span
+                  >. Through SolveIt Indonesia, I also gained experience
+                  managing technical projects and collaborating closely with
+                  both frontend and backend engineering squads.
+                </p>
+                <p>
+                  My core focus is building responsive, functional, and visually
+                  clean digital products that solve real-world problems through
+                  disciplined engineering principles and thoughtful user
+                  ergonomics.
+                </p>
+              </div>
+              <!-- Metric highlights -->
+              <div class="grid grid-cols-3 gap-4 pt-4">
+                <div class="p-4 rounded-xl bg-bg-card">
+                  <div
+                    class="font-display-hero-mobile text-display-hero-mobile font-bold text-border-accent"
+                  >
+                    3.5
+                  </div>
+                  <div
+                    class="font-body-small text-body-small text-text-muted mt-1"
+                  >
+                    Years to Graduate
+                  </div>
+                </div>
+                <div class="p-4 rounded-xl bg-bg-card">
+                  <div
+                    class="font-display-hero-mobile text-display-hero-mobile font-bold text-primary"
+                  >
+                    12+
+                  </div>
+                  <div
+                    class="font-body-small text-body-small text-text-muted mt-1"
+                  >
+                    Web Repositories
+                  </div>
+                </div>
+                <div class="p-4 rounded-xl bg-bg-card">
+                  <div
+                    class="font-display-hero-mobile text-display-hero-mobile font-bold text-secondary"
+                  >
+                    4+
+                  </div>
+                  <div
+                    class="font-body-small text-body-small text-text-muted mt-1"
+                  >
+                    Industry Internships
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 04: TECH STACK -->
+        <section
+          class="w-full max-w-container-max-width mx-auto px-6 py-space-xl lg:py-space-section-desktop"
+        >
+          <div class="flex flex-col items-center text-center mb-12 space-y-2">
+            <div
+              class="inline-flex items-center gap-2 font-label-code text-label-code text-border-accent uppercase tracking-widest"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-border-accent"></span>
+              <span>TECH STACK</span>
+            </div>
+            <h2
+              class="font-headline-section text-headline-section text-text-primary font-bold"
+            >
+              Core technologies I work with daily
+            </h2>
+            <p
+              class="font-body-medium text-body-medium text-text-muted max-w-lg"
+            >
+              A clinical selection of tools and modern frameworks applied to
+              ship resilient, client-ready interfaces.
+            </p>
+          </div>
+          <!-- Tech Grid (140px min card style) -->
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-center"
+          >
+            <!-- React -->
+            <div
+              class="h-[100px] flex flex-col items-center justify-center p-4 rounded-2xl bg-bg-card hover:-translate-y-1.5 transition-all duration-200 group shadow-sm hover:shadow-[0_0_16px_rgba(0,229,212,0.2)]"
+            >
+              <span
+                class="material-symbols-outlined text-3xl text-border-accent group-hover:scale-110 transition-transform"
+                >code_blocks</span
+              >
+              <span
+                class="font-label-nav text-label-nav text-text-primary mt-2 group-hover:text-border-accent"
+                >React</span
+              >
+            </div>
+            <!-- Next.js -->
+            <div
+              class="h-[100px] flex flex-col items-center justify-center p-4 rounded-2xl bg-bg-card hover:-translate-y-1.5 transition-all duration-200 group shadow-sm hover:shadow-[0_0_16px_rgba(0,229,212,0.2)]"
+            >
+              <span
+                class="material-symbols-outlined text-3xl text-primary group-hover:scale-110 transition-transform"
+                >layers</span
+              >
+              <span
+                class="font-label-nav text-label-nav text-text-primary mt-2 group-hover:text-border-accent"
+                >Next.js</span
+              >
+            </div>
+            <!-- TypeScript -->
+            <div
+              class="h-[100px] flex flex-col items-center justify-center p-4 rounded-2xl bg-bg-card hover:-translate-y-1.5 transition-all duration-200 group shadow-sm hover:shadow-[0_0_16px_rgba(0,229,212,0.2)]"
+            >
+              <span
+                class="material-symbols-outlined text-3xl text-secondary group-hover:scale-110 transition-transform"
+                >javascript</span
+              >
+              <span
+                class="font-label-nav text-label-nav text-text-primary mt-2 group-hover:text-border-accent"
+                >TypeScript</span
+              >
+            </div>
+            <!-- Tailwind CSS -->
+            <div
+              class="h-[100px] flex flex-col items-center justify-center p-4 rounded-2xl bg-bg-card hover:-translate-y-1.5 transition-all duration-200 group shadow-sm hover:shadow-[0_0_16px_rgba(0,229,212,0.2)]"
+            >
+              <span
+                class="material-symbols-outlined text-3xl text-border-accent group-hover:scale-110 transition-transform"
+                >palette</span
+              >
+              <span
+                class="font-label-nav text-label-nav text-text-primary mt-2 group-hover:text-border-accent"
+                >Tailwind CSS</span
+              >
+            </div>
+            <!-- Laravel -->
+            <div
+              class="h-[100px] flex flex-col items-center justify-center p-4 rounded-2xl bg-bg-card hover:-translate-y-1.5 transition-all duration-200 group shadow-sm hover:shadow-[0_0_16px_rgba(0,229,212,0.2)]"
+            >
+              <span
+                class="material-symbols-outlined text-3xl text-error group-hover:scale-110 transition-transform"
+                >api</span
+              >
+              <span
+                class="font-label-nav text-label-nav text-text-primary mt-2 group-hover:text-border-accent"
+                >Laravel</span
+              >
+            </div>
+            <!-- MySQL -->
+            <div
+              class="h-[100px] flex flex-col items-center justify-center p-4 rounded-2xl bg-bg-card hover:-translate-y-1.5 transition-all duration-200 group shadow-sm hover:shadow-[0_0_16px_rgba(0,229,212,0.2)]"
+            >
+              <span
+                class="material-symbols-outlined text-3xl text-tertiary-fixed-dim group-hover:scale-110 transition-transform"
+                >database</span
+              >
+              <span
+                class="font-label-nav text-label-nav text-text-primary mt-2 group-hover:text-border-accent"
+                >MySQL</span
+              >
+            </div>
+            <!-- Git -->
+            <div
+              class="h-[100px] flex flex-col items-center justify-center p-4 rounded-2xl bg-bg-card hover:-translate-y-1.5 transition-all duration-200 group shadow-sm hover:shadow-[0_0_16px_rgba(0,229,212,0.2)]"
+            >
+              <span
+                class="material-symbols-outlined text-3xl text-secondary-fixed group-hover:scale-110 transition-transform"
+                >alt_route</span
+              >
+              <span
+                class="font-label-nav text-label-nav text-text-primary mt-2 group-hover:text-border-accent"
+                >Git</span
+              >
+            </div>
+            <!-- GitHub -->
+            <div
+              class="h-[100px] flex flex-col items-center justify-center p-4 rounded-2xl bg-bg-card hover:-translate-y-1.5 transition-all duration-200 group shadow-sm hover:shadow-[0_0_16px_rgba(0,229,212,0.2)]"
+            >
+              <span
+                class="material-symbols-outlined text-3xl text-on-surface group-hover:scale-110 transition-transform"
+                >deployed_code</span
+              >
+              <span
+                class="font-label-nav text-label-nav text-text-primary mt-2 group-hover:text-border-accent"
+                >GitHub</span
+              >
+            </div>
+            <!-- Figma -->
+            <div
+              class="h-[100px] flex flex-col items-center justify-center p-4 rounded-2xl bg-bg-card hover:-translate-y-1.5 transition-all duration-200 group shadow-sm hover:shadow-[0_0_16px_rgba(0,229,212,0.2)]"
+            >
+              <span
+                class="material-symbols-outlined text-3xl text-tertiary group-hover:scale-110 transition-transform"
+                >polyline</span
+              >
+              <span
+                class="font-label-nav text-label-nav text-text-primary mt-2 group-hover:text-border-accent"
+                >Figma</span
+              >
+            </div>
+            <!-- REST API / Node -->
+            <div
+              class="h-[100px] flex flex-col items-center justify-center p-4 rounded-2xl bg-bg-card hover:-translate-y-1.5 transition-all duration-200 group shadow-sm hover:shadow-[0_0_16px_rgba(0,229,212,0.2)]"
+            >
+              <span
+                class="material-symbols-outlined text-3xl text-primary-fixed-dim group-hover:scale-110 transition-transform"
+                >cloud_sync</span
+              >
+              <span
+                class="font-label-nav text-label-nav text-text-primary mt-2 group-hover:text-border-accent"
+                >REST APIs</span
+              >
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 05: EDUCATION & EXPERIENCE TIMELINES -->
+        <section
+          class="w-full max-w-container-max-width mx-auto px-6 py-space-xl lg:py-space-section-desktop"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            <!-- Column 1: Education -->
+            <div class="flex flex-col space-y-8">
+              <div
+                class="inline-flex items-center gap-2 font-label-code text-label-code text-border-accent uppercase tracking-widest"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-border-accent"></span>
+                <span>EDUCATION</span>
+              </div>
+              <div
+                class="relative pl-8 space-y-10 before:content-[''] before:absolute before:left-3 before:top-2 before:bottom-2 before:w-[2px] before:bg-surface-variant"
+              >
+                <!-- Node 1 -->
+                <div class="relative group">
+                  <span
+                    class="absolute -left-[27px] top-1.5 w-4 h-4 rounded-full bg-bg-card flex items-center justify-center shadow-[0_0_8px_rgba(0,229,212,0.5)]"
+                  >
+                    <span class="w-2 h-2 rounded-full bg-border-accent"></span>
+                  </span>
+                  <div
+                    class="bg-bg-card p-6 rounded-2xl transition-all duration-200 group-hover:translate-x-1 shadow-sm"
+                  >
+                    <span
+                      class="font-label-code text-label-code text-border-accent uppercase"
+                      >2022 – 2026 • Graduated in 3.5 Years</span
+                    >
+                    <h4
+                      class="font-title-card text-title-card text-text-primary font-bold mt-1"
+                    >
+                      Universitas Negeri Malang
+                    </h4>
+                    <p
+                      class="font-body-medium text-body-medium text-text-secondary mt-1"
+                    >
+                      Bachelor of Informatics Engineering
+                    </p>
+                    <p
+                      class="font-body-small text-body-small text-text-muted mt-2 leading-relaxed"
+                    >
+                      Focused on software development paradigms, human-computer
+                      interaction, data structures, and progressive web
+                      application frameworks.
+                    </p>
+                  </div>
+                </div>
+                <!-- Node 2 -->
+                <div class="relative group">
+                  <span
+                    class="absolute -left-[27px] top-1.5 w-4 h-4 rounded-full bg-bg-card flex items-center justify-center shadow-[0_0_8px_rgba(0,229,212,0.5)]"
+                  >
+                    <span class="w-2 h-2 rounded-full bg-border-accent"></span>
+                  </span>
+                  <div
+                    class="bg-bg-card p-6 rounded-2xl transition-all duration-200 group-hover:translate-x-1 shadow-sm"
+                  >
+                    <span
+                      class="font-label-code text-label-code text-border-accent uppercase"
+                      >2024 • Intensive Program</span
+                    >
+                    <h4
+                      class="font-title-card text-title-card text-text-primary font-bold mt-1"
+                    >
+                      MSIB VINIX7
+                    </h4>
+                    <p
+                      class="font-body-medium text-body-medium text-text-secondary mt-1"
+                    >
+                      Data Science Independent Study
+                    </p>
+                    <p
+                      class="font-body-small text-body-small text-text-muted mt-2 leading-relaxed"
+                    >
+                      Hands-on training in predictive analytics, computational
+                      modeling, and data pipelines integrated into frontend
+                      dashboard interfaces.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column 2: Experience -->
+            <div class="flex flex-col space-y-8">
+              <div
+                class="inline-flex items-center gap-2 font-label-code text-label-code text-border-accent uppercase tracking-widest"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-border-accent"></span>
+                <span>EXPERIENCE</span>
+              </div>
+              <div
+                class="relative pl-8 space-y-10 before:content-[''] before:absolute before:left-3 before:top-2 before:bottom-2 before:w-[2px] before:bg-surface-variant"
+              >
+                <!-- Node 1 -->
+                <div class="relative group">
+                  <span
+                    class="absolute -left-[27px] top-1.5 w-4 h-4 rounded-full bg-bg-card flex items-center justify-center shadow-[0_0_8px_rgba(0,229,212,0.5)]"
+                  >
+                    <span class="w-2 h-2 rounded-full bg-border-accent"></span>
+                  </span>
+                  <div
+                    class="bg-bg-card p-6 rounded-2xl transition-all duration-200 group-hover:translate-x-1 shadow-sm"
+                  >
+                    <div
+                      class="flex flex-wrap items-center justify-between gap-2"
+                    >
+                      <span
+                        class="font-label-code text-label-code text-border-accent uppercase"
+                        >Oct 2025 – Present</span
+                      >
+                      <span
+                        class="px-2.5 py-0.5 rounded-full bg-primary-container/20 text-border-accent font-label-code text-label-code"
+                        >Current</span
+                      >
+                    </div>
+                    <h4
+                      class="font-title-card text-title-card text-text-primary font-bold mt-1"
+                    >
+                      SolveIt Indonesia
+                    </h4>
+                    <p
+                      class="font-body-medium text-body-medium text-text-secondary mt-1"
+                    >
+                      Project Manager &amp; Frontend Developer
+                    </p>
+                    <ul
+                      class="mt-3 space-y-1.5 font-body-small text-body-small text-text-muted"
+                    >
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="material-symbols-outlined text-border-accent text-sm mt-1"
+                          >arrow_right</span
+                        >
+                        <span
+                          >Coordinated full-lifecycle client web platform
+                          initiatives and delivery sprints.</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="material-symbols-outlined text-border-accent text-sm mt-1"
+                          >arrow_right</span
+                        >
+                        <span
+                          >Developed modular, fully responsive frontend systems
+                          with high performance metrics.</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="material-symbols-outlined text-border-accent text-sm mt-1"
+                          >arrow_right</span
+                        >
+                        <span
+                          >Synchronized API schemas and contract workflows with
+                          backend engineers.</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Node 2 -->
+                <div class="relative group">
+                  <span
+                    class="absolute -left-[27px] top-1.5 w-4 h-4 rounded-full bg-bg-card flex items-center justify-center shadow-[0_0_8px_rgba(0,229,212,0.5)]"
+                  >
+                    <span class="w-2 h-2 rounded-full bg-border-accent"></span>
+                  </span>
+                  <div
+                    class="bg-bg-card p-6 rounded-2xl transition-all duration-200 group-hover:translate-x-1 shadow-sm"
+                  >
+                    <span
+                      class="font-label-code text-label-code text-border-accent uppercase"
+                      >Feb 2024 – Jun 2024</span
+                    >
+                    <h4
+                      class="font-title-card text-title-card text-text-primary font-bold mt-1"
+                    >
+                      LPPM Universitas Negeri Malang
+                    </h4>
+                    <p
+                      class="font-body-medium text-body-medium text-text-secondary mt-1"
+                    >
+                      Web Developer Intern
+                    </p>
+                    <ul
+                      class="mt-3 space-y-1.5 font-body-small text-body-small text-text-muted"
+                    >
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="material-symbols-outlined text-border-accent text-sm mt-1"
+                          >arrow_right</span
+                        >
+                        <span
+                          >Engineered core features for RADAR UM research
+                          evaluation portal.</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="material-symbols-outlined text-border-accent text-sm mt-1"
+                          >arrow_right</span
+                        >
+                        <span
+                          >Organized university academic and scientific
+                          publishing databases using Laravel and MySQL.</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Node 3 -->
+                <div class="relative group">
+                  <span
+                    class="absolute -left-[27px] top-1.5 w-4 h-4 rounded-full bg-bg-card flex items-center justify-center shadow-[0_0_8px_rgba(0,229,212,0.5)]"
+                  >
+                    <span class="w-2 h-2 rounded-full bg-border-accent"></span>
+                  </span>
+                  <div
+                    class="bg-bg-card p-6 rounded-2xl transition-all duration-200 group-hover:translate-x-1 shadow-sm"
+                  >
+                    <span
+                      class="font-label-code text-label-code text-border-accent uppercase"
+                      >Aug 2023 – Dec 2023</span
+                    >
+                    <h4
+                      class="font-title-card text-title-card text-text-primary font-bold mt-1"
+                    >
+                      PT Inovasi Lentera Cipta Kreasi
+                    </h4>
+                    <p
+                      class="font-body-medium text-body-medium text-text-secondary mt-1"
+                    >
+                      Junior Data Scientist Intern
+                    </p>
+                    <ul
+                      class="mt-3 space-y-1.5 font-body-small text-body-small text-text-muted"
+                    >
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="material-symbols-outlined text-border-accent text-sm mt-1"
+                          >arrow_right</span
+                        >
+                        <span
+                          >Performed structured ETL operations, telemetry data
+                          cleaning, and statistical validation.</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="material-symbols-outlined text-border-accent text-sm mt-1"
+                          >arrow_right</span
+                        >
+                        <span
+                          >Drafted business intelligence reporting
+                          visualizations for operational leadership.</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 06 & 07: SELECTED PROJECTS -->
+        <section
+          class="w-full max-w-container-max-width mx-auto px-6 py-space-xl lg:py-space-section-desktop"
+          id="projects"
+        >
+          <div class="flex flex-col items-start mb-12 space-y-2">
+            <div
+              class="inline-flex items-center gap-2 font-label-code text-label-code text-border-accent uppercase tracking-widest"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-border-accent"></span>
+              <span>SELECTED PROJECTS</span>
+            </div>
+            <h2
+              class="font-headline-section text-headline-section text-text-primary font-bold"
+            >
+              Engineered with precision &amp; modern architectural standards
+            </h2>
+            <p class="font-body-medium text-body-medium text-text-muted">
+              Production platforms, commercial portals, and experimental
+              computational interfaces.
+            </p>
+          </div>
+          <!-- FEATURED PROJECT (Large Showcase Card) -->
+          <div
+            class="w-full bg-bg-card rounded-3xl p-6 lg:p-10 mb-10 shadow-xl transition-all duration-300 relative group overflow-hidden"
+          >
+            <!-- Glow corner decoration -->
+            <div
+              class="absolute -right-24 -top-24 w-80 h-80 bg-primary-container/10 blur-3xl pointer-events-none rounded-full"
+            ></div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <!-- Content (6 cols) -->
+              <div class="lg:col-span-6 flex flex-col space-y-6">
+                <div class="flex items-center gap-3">
+                  <span
+                    class="px-3 py-1 rounded-full bg-border-accent text-on-primary-container font-label-code text-label-code font-bold tracking-wide uppercase"
+                  >
+                    FEATURED PROJECT
+                  </span>
+                  <span class="font-label-code text-label-code text-text-muted"
+                    >Web Application</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-section text-headline-section text-text-primary font-bold"
+                >
+                  UMKM KAYUTANGAN
+                </h3>
+                <p
+                  class="font-body-large text-body-large text-text-secondary leading-relaxed"
+                >
+                  Website informasi dan pengelolaan UMKM di kawasan cagar budaya
+                  Kayutangan Malang dengan public interactive directory,
+                  authenticated merchant user dashboard, dan full administrative
+                  control system.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 rounded-full bg-surface-container-low text-border-accent font-label-code text-label-code"
+                    >React</span
+                  >
+                  <span
+                    class="px-3 py-1 rounded-full bg-surface-container-low text-border-accent font-label-code text-label-code"
+                    >TypeScript</span
+                  >
+                  <span
+                    class="px-3 py-1 rounded-full bg-surface-container-low text-border-accent font-label-code text-label-code"
+                    >Tailwind CSS</span
+                  >
+                  <span
+                    class="px-3 py-1 rounded-full bg-surface-container-low text-text-secondary font-label-code text-label-code"
+                    >Laravel</span
+                  >
+                  <span
+                    class="px-3 py-1 rounded-full bg-surface-container-low text-text-secondary font-label-code text-label-code"
+                    >MySQL</span
+                  >
+                </div>
+                <div class="flex items-center gap-4 pt-2">
+                  <a
+                    class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-border-accent hover:bg-border-accent hover:text-on-primary-container transition-all duration-200 font-label-nav text-label-nav shadow-[0_0_12px_rgba(0,229,212,0.2)]"
+                    href="#"
+                  >
+                    <span>[ Live Demo ]</span>
+                    <span class="material-symbols-outlined ml-2 text-sm"
+                      >open_in_new</span
+                    >
+                  </a>
+                  <a
+                    class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-surface-container hover:text-border-accent text-text-primary transition-all duration-200 font-label-nav text-label-nav"
+                    href="#"
+                  >
+                    <span>[ GitHub ]</span>
+                    <span class="material-symbols-outlined ml-2 text-sm"
+                      >code</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <!-- Interface Mockup Preview Container (6 cols) -->
+              <div class="lg:col-span-6">
+                <div
+                  class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-2xl"
+                >
+                  <!-- Browser Header -->
+                  <div
+                    class="h-9 bg-surface-container-low px-4 flex items-center justify-between text-text-muted"
+                  >
+                    <div class="flex items-center gap-1.5">
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-surface-variant"
+                      ></span>
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-surface-variant"
+                      ></span>
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-surface-variant"
+                      ></span>
+                    </div>
+                    <div
+                      class="px-4 py-0.5 rounded-md bg-surface-container-high font-label-code text-label-code text-text-secondary text-xs truncate max-w-[200px]"
+                    >
+                      kayutangan-heritage.id/catalog
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="material-symbols-outlined text-xs"
+                        >refresh</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Simulated App Canvas / Screenshot area -->
+                  <div
+                    class="p-6 bg-surface-container-low flex flex-col space-y-4"
+                  >
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="w-2 h-6 bg-border-accent rounded-sm"
+                        ></span>
+                        <span
+                          class="font-title-card text-title-card text-text-primary font-bold"
+                          >Katalog Heritage UMKM</span
+                        >
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="px-2 py-0.5 rounded bg-surface-container-high text-xs text-border-accent font-label-code"
+                          >48 Toko Terdaftar</span
+                        >
+                      </div>
+                    </div>
+                    <!-- Mini cards simulation -->
+                    <div class="grid grid-cols-2 gap-3">
+                      <div class="p-3 rounded-lg bg-bg-card space-y-2">
+                        <div
+                          class="w-full h-20 bg-surface-container rounded-md flex items-center justify-center text-text-muted"
+                        >
+                          <span
+                            class="material-symbols-outlined text-2xl text-border-accent"
+                            >storefront</span
+                          >
+                        </div>
+                        <div
+                          class="font-label-nav text-label-nav text-text-primary font-semibold truncate"
+                        >
+                          Kopi Kayutangan 1920
+                        </div>
+                        <div
+                          class="flex items-center justify-between text-xs text-text-muted"
+                        >
+                          <span>Kuliner &amp; Kafe</span>
+                          <span class="text-border-accent">★ 4.9</span>
+                        </div>
+                      </div>
+                      <div class="p-3 rounded-lg bg-bg-card space-y-2">
+                        <div
+                          class="w-full h-20 bg-surface-container rounded-md flex items-center justify-center text-text-muted"
+                        >
+                          <span
+                            class="material-symbols-outlined text-2xl text-primary"
+                            >local_mall</span
+                          >
+                        </div>
+                        <div
+                          class="font-label-nav text-label-nav text-text-primary font-semibold truncate"
+                        >
+                          Batik Klasik Heritage
+                        </div>
+                        <div
+                          class="flex items-center justify-between text-xs text-text-muted"
+                        >
+                          <span>Kriya Tradisional</span>
+                          <span class="text-border-accent">★ 4.8</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Mini stats bar -->
+                    <div
+                      class="flex items-center justify-between p-3 rounded-lg bg-surface-container-high font-label-code text-xs"
+                    >
+                      <span class="text-text-muted"
+                        >Synchronized Database: SQLite / MySQL</span
+                      >
+                      <span class="text-border-accent font-semibold"
+                        >• Online Cluster</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- OTHER PROJECTS (2-Column Grid) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Project 02: Hismaya -->
+            <div
+              class="bg-bg-card rounded-2xl p-6 flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 shadow-md group"
+            >
+              <div class="space-y-4">
+                <div
+                  class="aspect-video w-full rounded-xl bg-surface-container-low overflow-hidden relative flex items-center justify-center"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-bg-card via-transparent to-transparent z-10"
+                  ></div>
+                  <div
+                    class="flex flex-col items-center justify-center text-center p-4 z-20"
+                  >
+                    <span
+                      class="material-symbols-outlined text-4xl text-border-accent mb-2"
+                      >workspace_premium</span
+                    >
+                    <span
+                      class="font-title-card text-title-card font-bold text-text-primary"
+                      >Hismaya Certification Platform</span
+                    >
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-label-code text-label-code text-border-accent"
+                    >PROJECT 02 • WEB PLATFORM</span
+                  >
+                  <span class="font-label-code text-label-code text-text-muted"
+                    >2025</span
+                  >
+                </div>
+                <h4
+                  class="font-title-card text-title-card text-text-primary font-bold group-hover:text-border-accent transition-colors"
+                >
+                  Hismaya — Training &amp; Competency Hub
+                </h4>
+                <p
+                  class="font-body-small text-body-small text-text-secondary leading-relaxed"
+                >
+                  Enterprise certification, assessment workflow, and online
+                  course training platform with high-volume concurrency support
+                  and dynamic grading rubrics.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 space-y-4">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >Next.js</span
+                  >
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >TypeScript</span
+                  >
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >Tailwind</span
+                  >
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >Prisma</span
+                  >
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >PostgreSQL</span
+                  >
+                </div>
+                <div class="flex items-center justify-between pt-1">
+                  <a
+                    class="font-label-nav text-label-nav text-border-accent hover:underline flex items-center gap-1"
+                    href="#"
+                  >
+                    <span>View Details</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </a>
+                  <span
+                    class="material-symbols-outlined text-text-muted group-hover:text-border-accent transition-colors"
+                    >open_in_new</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Project 03: LSP Multi Bintang Komunikasi -->
+            <div
+              class="bg-bg-card rounded-2xl p-6 flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 shadow-md group"
+            >
+              <div class="space-y-4">
+                <div
+                  class="aspect-video w-full rounded-xl bg-surface-container-low overflow-hidden relative flex items-center justify-center"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-bg-card via-transparent to-transparent z-10"
+                  ></div>
+                  <div
+                    class="flex flex-col items-center justify-center text-center p-4 z-20"
+                  >
+                    <span
+                      class="material-symbols-outlined text-4xl text-primary mb-2"
+                      >verified</span
+                    >
+                    <span
+                      class="font-title-card text-title-card font-bold text-text-primary"
+                      >LSP MBK Assessment Engine</span
+                    >
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-label-code text-label-code text-border-accent"
+                    >PROJECT 03 • CERTIFICATION</span
+                  >
+                  <span class="font-label-code text-label-code text-text-muted"
+                    >2025</span
+                  >
+                </div>
+                <h4
+                  class="font-title-card text-title-card text-text-primary font-bold group-hover:text-border-accent transition-colors"
+                >
+                  LSP Multi Bintang Komunikasi
+                </h4>
+                <p
+                  class="font-body-small text-body-small text-text-secondary leading-relaxed"
+                >
+                  Professional body accreditation portal built to monitor
+                  assessor portfolios, participant certification exams, and
+                  automated digital certificate generation.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 space-y-4">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >React</span
+                  >
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >Tailwind CSS</span
+                  >
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >Laravel</span
+                  >
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >MySQL</span
+                  >
+                </div>
+                <div class="flex items-center justify-between pt-1">
+                  <a
+                    class="font-label-nav text-label-nav text-border-accent hover:underline flex items-center gap-1"
+                    href="#"
+                  >
+                    <span>View Details</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </a>
+                  <span
+                    class="material-symbols-outlined text-text-muted group-hover:text-border-accent transition-colors"
+                    >open_in_new</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Project 04: RADAR UM -->
+            <div
+              class="bg-bg-card rounded-2xl p-6 flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 shadow-md group"
+            >
+              <div class="space-y-4">
+                <div
+                  class="aspect-video w-full rounded-xl bg-surface-container-low overflow-hidden relative flex items-center justify-center"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-bg-card via-transparent to-transparent z-10"
+                  ></div>
+                  <div
+                    class="flex flex-col items-center justify-center text-center p-4 z-20"
+                  >
+                    <span
+                      class="material-symbols-outlined text-4xl text-secondary mb-2"
+                      >analytics</span
+                    >
+                    <span
+                      class="font-title-card text-title-card font-bold text-text-primary"
+                      >RADAR UM Research Suite</span
+                    >
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-label-code text-label-code text-border-accent"
+                    >PROJECT 04 • ACADEMIC SYSTEM</span
+                  >
+                  <span class="font-label-code text-label-code text-text-muted"
+                    >2024</span
+                  >
+                </div>
+                <h4
+                  class="font-title-card text-title-card text-text-primary font-bold group-hover:text-border-accent transition-colors"
+                >
+                  RADAR UM — Research &amp; Service Portal
+                </h4>
+                <p
+                  class="font-body-small text-body-small text-text-secondary leading-relaxed"
+                >
+                  Internal faculty portal created for Universitas Negeri Malang
+                  to oversee academic community service grants, research data
+                  repositories, and reviewer scores.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 space-y-4">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >Laravel</span
+                  >
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >MySQL</span
+                  >
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >Bootstrap</span
+                  >
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >Chart.js</span
+                  >
+                </div>
+                <div class="flex items-center justify-between pt-1">
+                  <a
+                    class="font-label-nav text-label-nav text-border-accent hover:underline flex items-center gap-1"
+                    href="#"
+                  >
+                    <span>View Details</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </a>
+                  <span
+                    class="material-symbols-outlined text-text-muted group-hover:text-border-accent transition-colors"
+                    >open_in_new</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Project 05: Govind Abra Enterprise -->
+            <div
+              class="bg-bg-card rounded-2xl p-6 flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 shadow-md group"
+            >
+              <div class="space-y-4">
+                <div
+                  class="aspect-video w-full rounded-xl bg-surface-container-low overflow-hidden relative flex items-center justify-center"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-bg-card via-transparent to-transparent z-10"
+                  ></div>
+                  <div
+                    class="flex flex-col items-center justify-center text-center p-4 z-20"
+                  >
+                    <span
+                      class="material-symbols-outlined text-4xl text-border-accent mb-2"
+                      >apartment</span
+                    >
+                    <span
+                      class="font-title-card text-title-card font-bold text-text-primary"
+                      >Govind Abra Enterprise</span
+                    >
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-label-code text-label-code text-border-accent"
+                    >PROJECT 05 • BRAND PROFILE</span
+                  >
+                  <span class="font-label-code text-label-code text-text-muted"
+                    >2024</span
+                  >
+                </div>
+                <h4
+                  class="font-title-card text-title-card text-text-primary font-bold group-hover:text-border-accent transition-colors"
+                >
+                  Govind Abra Enterprise — Corporate Profile
+                </h4>
+                <p
+                  class="font-body-small text-body-small text-text-secondary leading-relaxed"
+                >
+                  High-converting digital company profile engineered with
+                  bespoke motion components, lightning-fast Core Web Vitals, and
+                  localized bilingual routing.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 space-y-4">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >React</span
+                  >
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >Next.js</span
+                  >
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >Tailwind CSS</span
+                  >
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-text-muted font-label-code text-xs"
+                    >Framer Motion</span
+                  >
+                </div>
+                <div class="flex items-center justify-between pt-1">
+                  <a
+                    class="font-label-nav text-label-nav text-border-accent hover:underline flex items-center gap-1"
+                    href="#"
+                  >
+                    <span>View Details</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </a>
+                  <span
+                    class="material-symbols-outlined text-text-muted group-hover:text-border-accent transition-colors"
+                    >open_in_new</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Extra Mobile App Project Callout (Single Full Card) -->
+          <div
+            class="mt-6 bg-bg-card rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-border-accent shrink-0"
+              >
+                <span class="material-symbols-outlined text-2xl"
+                  >smartphone</span
+                >
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4
+                    class="font-title-card text-title-card text-text-primary font-bold"
+                  >
+                    Electricity Monitoring App
+                  </h4>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-container-low text-border-accent font-label-code text-xs"
+                    >Mobile App</span
+                  >
+                </div>
+                <p class="font-body-small text-body-small text-text-muted mt-1">
+                  IoT telemetric monitoring app built with Flutter and Dart for
+                  real-time power consumption metrics.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 shrink-0">
+              <span
+                class="font-label-code text-xs text-text-secondary px-3 py-1 rounded-full bg-surface-container"
+                >Flutter / Dart</span
+              >
+              <a
+                class="p-2.5 rounded-xl bg-surface-container hover:text-border-accent text-text-primary transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-xl"
+                  >open_in_new</span
+                >
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 08: SKILLS (CHIPS & BADGES, NO PERCENTAGE BARS) -->
+        <section
+          class="w-full max-w-container-max-width mx-auto px-6 py-space-xl lg:py-space-section-desktop"
+        >
+          <div class="flex flex-col items-center text-center mb-12 space-y-2">
+            <div
+              class="inline-flex items-center gap-2 font-label-code text-label-code text-border-accent uppercase tracking-widest"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-border-accent"></span>
+              <span>SKILLS</span>
+            </div>
+            <h2
+              class="font-headline-section text-headline-section text-text-primary font-bold"
+            >
+              Engineered competencies &amp; workflows
+            </h2>
+            <p
+              class="font-body-medium text-body-medium text-text-muted max-w-lg"
+            >
+              Structured strictly by technical domain without arbitrary
+              percentage sliders.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Frontend Category -->
+            <div
+              class="bg-bg-card rounded-2xl p-6 flex flex-col space-y-5 shadow-sm"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="p-2 rounded-lg bg-surface-container text-border-accent"
+                >
+                  <span class="material-symbols-outlined text-2xl"
+                    >devices</span
+                  >
+                </div>
+                <div>
+                  <h3
+                    class="font-title-card text-title-card font-bold text-text-primary"
+                  >
+                    Frontend
+                  </h3>
+                  <span class="font-label-code text-xs text-text-muted"
+                    >Client Architecture</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2.5 pt-2">
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >Next.js</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >JavaScript (ES6+)</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >Tailwind CSS</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >Responsive Design</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >HTML5 / Semantic UI</span
+                >
+              </div>
+            </div>
+            <!-- Backend Category -->
+            <div
+              class="bg-bg-card rounded-2xl p-6 flex flex-col space-y-5 shadow-sm"
+            >
+              <div class="flex items-center gap-3">
+                <div class="p-2 rounded-lg bg-surface-container text-primary">
+                  <span class="material-symbols-outlined text-2xl">dns</span>
+                </div>
+                <div>
+                  <h3
+                    class="font-title-card text-title-card font-bold text-text-primary"
+                  >
+                    Backend
+                  </h3>
+                  <span class="font-label-code text-xs text-text-muted"
+                    >Services &amp; Data Layers</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2.5 pt-2">
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >Laravel</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >RESTful APIs</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >MySQL</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >Prisma ORM</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >PostgreSQL</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >Node.js (Basic)</span
+                >
+              </div>
+            </div>
+            <!-- Tools & Workflow Category -->
+            <div
+              class="bg-bg-card rounded-2xl p-6 flex flex-col space-y-5 shadow-sm"
+            >
+              <div class="flex items-center gap-3">
+                <div class="p-2 rounded-lg bg-surface-container text-secondary">
+                  <span class="material-symbols-outlined text-2xl">build</span>
+                </div>
+                <div>
+                  <h3
+                    class="font-title-card text-title-card font-bold text-text-primary"
+                  >
+                    Tools &amp; Workflow
+                  </h3>
+                  <span class="font-label-code text-xs text-text-muted"
+                    >Productivity &amp; VCS</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2.5 pt-2">
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >Git</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >GitHub</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >Figma</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >VS Code</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >Vercel</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >Postman</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-surface-container-low text-text-primary font-label-nav text-sm hover:text-border-accent transition-colors"
+                  >Agile / Scrum</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 09: CERTIFICATIONS -->
+        <section
+          class="w-full max-w-container-max-width mx-auto px-6 py-space-xl lg:py-space-section-desktop"
+        >
+          <div class="flex flex-col items-start mb-12 space-y-2">
+            <div
+              class="inline-flex items-center gap-2 font-label-code text-label-code text-border-accent uppercase tracking-widest"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-border-accent"></span>
+              <span>CERTIFICATIONS</span>
+            </div>
+            <h2
+              class="font-headline-section text-headline-section text-text-primary font-bold"
+            >
+              Recognized Credentials &amp; Certifications
+            </h2>
+            <p class="font-body-medium text-body-medium text-text-muted">
+              Certifications and learning experiences that support my technical
+              foundations.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Cert 01 -->
+            <div
+              class="bg-bg-card rounded-2xl p-5 flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-200 shadow-md group"
+            >
+              <div class="space-y-4">
+                <div
+                  class="aspect-[4/3] w-full rounded-xl bg-surface-container-low flex flex-col items-center justify-center p-4 text-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-4xl text-border-accent mb-2"
+                    >model_training</span
+                  >
+                  <span
+                    class="font-label-code text-xs text-text-muted uppercase"
+                    >Credential 01</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="font-label-code text-label-code text-border-accent"
+                    >VINIX7 • 2024</span
+                  >
+                  <h4
+                    class="font-title-card text-title-card text-text-primary font-bold mt-1"
+                  >
+                    MSIB Data Science
+                  </h4>
+                  <p
+                    class="font-body-small text-body-small text-text-muted mt-1"
+                  >
+                    Kampus Merdeka certified data intelligence &amp; analytics
+                    program.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-6 pt-3">
+                <a
+                  class="w-full py-2 rounded-lg bg-surface-container hover:bg-border-accent hover:text-on-primary-container text-text-primary text-center font-label-nav text-label-nav flex items-center justify-center gap-1.5 transition-colors"
+                  href="#"
+                >
+                  <span>[ View Credential ]</span>
+                  <span class="material-symbols-outlined text-sm"
+                    >north_east</span
+                  >
+                </a>
+              </div>
+            </div>
+            <!-- Cert 02 -->
+            <div
+              class="bg-bg-card rounded-2xl p-5 flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-200 shadow-md group"
+            >
+              <div class="space-y-4">
+                <div
+                  class="aspect-[4/3] w-full rounded-xl bg-surface-container-low flex flex-col items-center justify-center p-4 text-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-4xl text-primary mb-2"
+                    >badge</span
+                  >
+                  <span
+                    class="font-label-code text-xs text-text-muted uppercase"
+                    >Credential 02</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="font-label-code text-label-code text-border-accent"
+                    >BNSP • 2024</span
+                  >
+                  <h4
+                    class="font-title-card text-title-card text-text-primary font-bold mt-1"
+                  >
+                    Junior Data Scientist
+                  </h4>
+                  <p
+                    class="font-body-small text-body-small text-text-muted mt-1"
+                  >
+                    National professional certification endorsed by
+                    Kemdikbudristek.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-6 pt-3">
+                <a
+                  class="w-full py-2 rounded-lg bg-surface-container hover:bg-border-accent hover:text-on-primary-container text-text-primary text-center font-label-nav text-label-nav flex items-center justify-center gap-1.5 transition-colors"
+                  href="#"
+                >
+                  <span>[ View Credential ]</span>
+                  <span class="material-symbols-outlined text-sm"
+                    >north_east</span
+                  >
+                </a>
+              </div>
+            </div>
+            <!-- Cert 03 -->
+            <div
+              class="bg-bg-card rounded-2xl p-5 flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-200 shadow-md group"
+            >
+              <div class="space-y-4">
+                <div
+                  class="aspect-[4/3] w-full rounded-xl bg-surface-container-low flex flex-col items-center justify-center p-4 text-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-4xl text-secondary mb-2"
+                    >code</span
+                  >
+                  <span
+                    class="font-label-code text-xs text-text-muted uppercase"
+                    >Credential 03</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="font-label-code text-label-code text-border-accent"
+                    >LPPM UM • 2024</span
+                  >
+                  <h4
+                    class="font-title-card text-title-card text-text-primary font-bold mt-1"
+                  >
+                    Web Developer
+                  </h4>
+                  <p
+                    class="font-body-small text-body-small text-text-muted mt-1"
+                  >
+                    Institutional certification for production web portal
+                    delivery.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-6 pt-3">
+                <a
+                  class="w-full py-2 rounded-lg bg-surface-container hover:bg-border-accent hover:text-on-primary-container text-text-primary text-center font-label-nav text-label-nav flex items-center justify-center gap-1.5 transition-colors"
+                  href="#"
+                >
+                  <span>[ View Credential ]</span>
+                  <span class="material-symbols-outlined text-sm"
+                    >north_east</span
+                  >
+                </a>
+              </div>
+            </div>
+            <!-- Cert 04 -->
+            <div
+              class="bg-bg-card rounded-2xl p-5 flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-200 shadow-md group"
+            >
+              <div class="space-y-4">
+                <div
+                  class="aspect-[4/3] w-full rounded-xl bg-surface-container-low flex flex-col items-center justify-center p-4 text-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-4xl text-tertiary mb-2"
+                    >hub</span
+                  >
+                  <span
+                    class="font-label-code text-xs text-text-muted uppercase"
+                    >Credential 04</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="font-label-code text-label-code text-border-accent"
+                    >Cisco Academy • 2023</span
+                  >
+                  <h4
+                    class="font-title-card text-title-card text-text-primary font-bold mt-1"
+                  >
+                    IT Essentials &amp; Net
+                  </h4>
+                  <p
+                    class="font-body-small text-body-small text-text-muted mt-1"
+                  >
+                    Network architectures, hardware systems, and diagnostics.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-6 pt-3">
+                <a
+                  class="w-full py-2 rounded-lg bg-surface-container hover:bg-border-accent hover:text-on-primary-container text-text-primary text-center font-label-nav text-label-nav flex items-center justify-center gap-1.5 transition-colors"
+                  href="#"
+                >
+                  <span>[ View Credential ]</span>
+                  <span class="material-symbols-outlined text-sm"
+                    >north_east</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 10: CONTACT CALLOUT -->
+        <section
+          class="w-full max-w-container-max-width mx-auto px-6 py-space-xl lg:py-space-section-desktop mb-12"
+          id="contact"
+        >
+          <div
+            class="w-full bg-gradient-to-b from-bg-card to-surface-container-low rounded-3xl p-8 lg:p-16 relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+          >
+            <!-- Glow ambient behind CTA -->
+            <div
+              class="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary-container/15 rounded-full blur-3xl pointer-events-none"
+            ></div>
+            <div
+              class="max-w-2xl mx-auto flex flex-col items-center text-center space-y-6 relative z-10"
+            >
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container font-label-code text-label-code text-border-accent uppercase tracking-wider"
+              >
+                <span
+                  class="w-2 h-2 rounded-full bg-border-accent animate-pulse"
+                ></span>
+                <span>GET IN TOUCH</span>
+              </div>
+              <h2
+                class="font-headline-section text-headline-section lg:text-display-hero-mobile text-text-primary font-extrabold uppercase tracking-tight"
+              >
+                LET'S BUILD SOMETHING TOGETHER.
+              </h2>
+              <p class="font-body-large text-body-large text-text-secondary">
+                Have a project in mind, collaboration idea, or frontend
+                developer job opportunity? Feel free to reach out and let's
+                craft something remarkable.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full sm:w-auto"
+              >
+                <a
+                  class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full text-border-accent hover:bg-border-accent hover:text-on-primary-container font-label-nav text-label-nav shadow-[0_0_20px_rgba(0,229,212,0.3)] transition-all duration-200"
+                  href="mailto:faiq.zhafran@example.com"
+                >
+                  <span>[ Send Email / Contact Me ]</span>
+                  <span class="material-symbols-outlined ml-2 text-base"
+                    >send</span
+                  >
+                </a>
+                <button
+                  class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-surface-container hover:text-border-accent text-text-primary font-label-nav text-label-nav transition-all duration-200"
+                  id="copy-email-btn"
+                  onclick="copyEmailToClipboard()"
+                >
+                  <span class="material-symbols-outlined mr-2 text-base"
+                    >content_copy</span
+                  >
+                  <span id="copy-btn-text">Copy Email</span>
+                </button>
+              </div>
+              <!-- Copied feedback toast inline -->
+              <div
+                class="hidden font-label-code text-label-code text-border-accent"
+                id="copy-feedback"
+              >
+                ✓ Email copied to clipboard: faiq.zhafran@example.com
+              </div>
+              <!-- Social Icons Row in Contact -->
+              <div class="pt-6 flex items-center gap-8 text-text-muted">
+                <a
+                  class="hover:text-border-accent transition-colors flex items-center gap-1.5 font-label-code text-xs"
+                  href="#"
+                >
+                  <span>GitHub</span>
+                </a>
+                <span class="text-surface-variant">•</span>
+                <a
+                  class="hover:text-border-accent transition-colors flex items-center gap-1.5 font-label-code text-xs"
+                  href="#"
+                >
+                  <span>LinkedIn</span>
+                </a>
+                <span class="text-surface-variant">•</span>
+                <a
+                  class="hover:text-border-accent transition-colors flex items-center gap-1.5 font-label-code text-xs"
+                  href="#"
+                >
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Interactive JavaScript Micro-interactions -->
+        <script>
+          function copyEmailToClipboard() {
+            const email = "faiq.zhafran@example.com";
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(email).then(() => {
+                showCopySuccess();
+              });
+            } else {
+              showCopySuccess();
+            }
+          }
+
+          function showCopySuccess() {
+            const feedback = document.getElementById("copy-feedback");
+            const btnText = document.getElementById("copy-btn-text");
+            if (feedback && btnText) {
+              feedback.classList.remove("hidden");
+              btnText.textContent = "Copied!";
+              setTimeout(() => {
+                feedback.classList.add("hidden");
+                btnText.textContent = "Copy Email";
+              }, 3000);
+            }
+          }
+        </script>
+      </div>
+    </main>
+    <footer class="w-full bg-bg-secondary border-t border-border-subtle">
+      <div
+        class="max-w-container-max-width mx-auto px-6 py-space-xl lg:py-space-2xl"
+      >
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-6 pb-space-lg border-b border-border-subtle"
+        >
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-left gap-1"
+          >
+            <span
+              class="font-title-card text-title-card text-text-primary font-bold tracking-tight"
+              >Fa'iq Zhafran Naufal Brinatta</span
+            ><span class="font-body-small text-body-small text-text-muted"
+              >Frontend Developer &amp; Computational Architect</span
+            >
+          </div>
+          <div
+            class="flex items-center gap-6 font-label-nav text-label-nav text-on-surface-variant"
+          >
+            <a class="hover:text-primary transition-colors" href="#">GitHub</a
+            ><a class="hover:text-primary transition-colors" href="#"
+              >LinkedIn</a
+            ><a class="hover:text-primary transition-colors" href="#"
+              >Instagram</a
+            ><a class="hover:text-primary transition-colors" href="#">Email</a>
+          </div>
+        </div>
+        <div
+          class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-4 font-body-small text-body-small text-text-muted"
+        >
+          <p>© 2026 Fa'iq Zhafran. Built with React &amp; Tailwind CSS.</p>
+          <div class="flex items-center gap-2">
+            <span
+              class="w-2 h-2 rounded-full bg-border-accent animate-pulse"
+            ></span
+            ><span
+              class="font-label-code text-label-code text-text-secondary uppercase tracking-wider"
+              >Available for opportunities</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
