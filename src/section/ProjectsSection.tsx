@@ -4,7 +4,6 @@ import {
   ExternalLink,
   ArrowRight,
   RotateCw,
-  Smartphone,
   Award,
   CheckCircle2,
   BarChart3,
