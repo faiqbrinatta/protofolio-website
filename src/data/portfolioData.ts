@@ -11,23 +11,23 @@ export const PERSONAL_INFO = {
   fullName: "Fa'iq Zhafran Naufal Brinatta",
   shortName: "Fa'iq Brinatta",
   brandName: "KZStudios",
-  role: "Fullstack Web Developer",
-  tagline: "Full STack Web Developer",
+  role: "Fullstack  Developer",
+  tagline: "Fullstack  Developer",
   headline:
     "Focused on engineering fast, functional, and user-centered web applications.",
   description:
-    "Detail-oriented Full-Stack Web Developer with a degree in Informatics Engineering. Combines technical expertise in end-to-end web development with experience in project management and digital product creation to deliver scalable, user-friendly, and responsive web applications.",
+    "Detail-oriented Full-Stack Developer with a degree in Informatics Engineering. Combines technical expertise in end-to-end web development with experience in project management and digital product creation to deliver scalable, user-friendly, and responsive web applications.",
   aboutNarrative: [
-    "I'm Fa'iq Zhafran Naufal Brinatta, an Informatics Engineering graduate from Universitas Negeri Malang specializing in Full-Stack Web Development and UI/UX Design",
-    "I have hands-on experience building end-to-end web applications using React, Next.js, Laravel, Tailwind CSS, and MySQL. During my time at SolveIt Indonesia, I managed technical projects and collaborated seamlessly across frontend and backend engineering squads.",
-    "My core focus is developing responsive, functional, and visually clean digital products—bridging thoughtful user ergonomics with reliable server-side engineering to solve real-world problems.",
+    "Bachelor’s degree in Informatics Engineering from Universitas Negeri Malang with experience in web application development. Skilled in frontend and backend development using JavaScript, PHP, React.js, and Laravel, with experience in database management using MySQL and SQL.",
+    "Experienced in building and integrating REST APIs, testing and debugging applications, using Git and GitHub for development collaboration, and deploying web applications.",
+    "Strong analytical and problem-solving skills with good communication abilities. Interested in developing applications and information systems that effectively support business needs.",
   ],
   email: "faiqbrinatta14@gmail.com",
   location: "Blitar, Indonesia",
   degree: "B.Eng Informatics (3.5 yrs)",
   university: "Universitas Negeri Malang",
   status: "Open to Work",
-  statusRole: "Full Stack Web Developement",
+  statusRole: "Fullstack Developement",
   metrics: [
     {
       value: "3.5",
@@ -126,8 +126,8 @@ export const FEATURED_PROJECT: Project = {
   detailedDescription:
     "Platform komprehensif yang memetakan puluhan UMKM lokal di kawasan warisan sejarah Kayutangan Malang. Dilengkapi pencarian interaktif real-time, filter kategori kuliner & kriya, autentikasi merchant multi-tier, serta panel analitik kunjungan turis.",
   tags: ["React", "TypeScript", "Tailwind CSS", "Next.jS", "PostgreSQL"],
-  liveDemoUrl: "#",
-  githubUrl: "#",
+  liveDemoUrl: " https://umkm-kayutangan.vercel.app/",
+  githubUrl: "",
   iconName: "Store",
   image: "",
 };
@@ -140,15 +140,15 @@ export const OTHER_PROJECTS: Project[] = [
     category: "Web Platform",
     year: "2026",
     description:
-      "Enterprise certification, assessment workflow, and online course training platform with high-volume concurrency support and dynamic grading rubrics.",
+      "Hismaya Cahaya Rahayu is a web-based project developed to provide a professional digital platform for presenting company information, services, and other relevant content. The website is designed with a clear information structure, responsive layout, and user-friendly interface to ensure an accessible and seamless experience across different devices.",
     detailedDescription:
-      "Sistem manajemen pelatihan dan uji kompetensi berskala enterprise dengan fitur sinkronisasi materi real-time, ujian terjadwal, dan sertifikat ber-QR code verifikasi otomatis.",
+      "Hismaya Cahaya Rahayu is a web-based project developed to provide a professional digital platform for presenting company information, services, and other relevant content. The website is designed with a clear information structure, responsive layout, and user-friendly interface to ensure an accessible and seamless experience across different devices.",
     tags: ["Next.js", "TypeScript", "Tailwind", "Prisma", "PostgreSQL"],
     liveDemoUrl: "https://hismaya.com/",
-    githubUrl: "#",
+    githubUrl: "",
     iconName: "Award",
     color: "text-border-accent",
-    image: "../../src/assets/projects/hismaya-cahaya.png",
+    image: "../projects/hismaya-cahaya.png",
   },
   {
     id: "proj-lsp",
@@ -157,15 +157,15 @@ export const OTHER_PROJECTS: Project[] = [
     category: "Certification System",
     year: "2025",
     description:
-      "Professional body accreditation portal built to monitor assessor portfolios, participant certification exams, and automated digital certificate generation.",
+      "LSP Multi Bintang Komunikasi is a website developed as an information and certification service platform for competency certification. The website provides prospective participants with information about available certification schemes, requirements, services, and certification processes. The project focuses on presenting information in a clear and structured way, with a responsive and user-friendly interface that allows users to easily access certification-related information across different devices.",
     detailedDescription:
-      "Portal resmi Lembaga Sertifikasi Profesi untuk mengelola jadwal asesmen, verifikasi berkas asesi BNSP, input penilaian asesor, dan penerbitan sertifikat kompetensi resmi.",
+      "LSP Multi Bintang Komunikasi is a website developed as an information and certification service platform for competency certification. The website provides prospective participants with information about available certification schemes, requirements, services, and certification processes. The project focuses on presenting information in a clear and structured way, with a responsive and user-friendly interface that allows users to easily access certification-related information across different devices.",
     tags: ["React", "Tailwind CSS", "Laravel", "MySQL"],
-    liveDemoUrl: "#",
-    githubUrl: "#",
+    liveDemoUrl: "",
+    githubUrl: "https://github.com/solveit-id/lsp-multi-bintang-komunikasi",
     iconName: "CheckCircle2",
     color: "text-primary",
-    image: "../src/assets/projects/lsp-mbkom.png",
+    image: "../projects/lsp-mbkom.png",
   },
   {
     id: "proj-radar",
@@ -174,15 +174,15 @@ export const OTHER_PROJECTS: Project[] = [
     category: "Academic System",
     year: "2024",
     description:
-      "Internal faculty portal created for Universitas Negeri Malang to oversee academic community service grants, research data repositories, and reviewer scores.",
+      "RADAR UM is a web-based platform developed during my internship at the Institute for Research and Community Service (LPPM), Universitas Negeri Malang. I was involved in the development process from designing the user interface and implementing features to managing the database. I also handled testing and troubleshooting to ensure the website worked properly and provided a smooth experience for its users. The project was developed using Laravel, MySQL, Bootstrap, and other supporting technologies.",
     detailedDescription:
-      "Portal evaluasi hibah penelitian dan pengabdian kepada masyarakat untuk ribuan sivitas akademika Universitas Negeri Malang dengan workflow multi-reviewer dan monitoring milestone.",
+      "RADAR UM is a web-based platform developed during my internship at the Institute for Research and Community Service (LPPM), Universitas Negeri Malang. I was involved in the development process from designing the user interface and implementing features to managing the database. I also handled testing and troubleshooting to ensure the website worked properly and provided a smooth experience for its users. The project was developed using Laravel, MySQL, Bootstrap, and other supporting technologies.",
     tags: ["Laravel", "MySQL", "Bootstrap", "Chart.js"],
-    liveDemoUrl: "#",
-    githubUrl: "#",
+    liveDemoUrl: "",
+    githubUrl: "https://github.com/faiqbrinatta/radarum-app",
     iconName: "BarChart3",
     color: "text-secondary",
-    image: "../src/assets/projects/radarum.png",
+    image: "../projects/radarum.png",
   },
   {
     id: "proj-govind",
@@ -191,29 +191,17 @@ export const OTHER_PROJECTS: Project[] = [
     category: "Corporate Profile",
     year: "2025",
     description:
-      "High-converting digital company profile engineered with bespoke motion components, lightning-fast Core Web Vitals, and localized bilingual routing.",
+      "Govindabra is a web-based certification platform designed to provide information and services related to professional competency certification. The website helps users explore available certification programs, understand the requirements and certification process, and access relevant information in a clear and organized manner. The platform is designed with a responsive and user-friendly interface to provide a seamless experience across different devices.",
     detailedDescription:
-      "Company profile interaktif berstandar modern dengan animasi mikro halus, integrasi form inquiry terproteksi, serta skor SEO dan Core Web Vitals 95+.",
+      "Govindabra is a web-based certification platform designed to provide information and services related to professional competency certification. The website helps users explore available certification programs, understand the requirements and certification process, and access relevant information in a clear and organized manner. The platform is designed with a responsive and user-friendly interface to provide a seamless experience across different devices.",
     tags: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
     liveDemoUrl: "https://govindabraenterprise.com/",
-    githubUrl: "#",
+    githubUrl: "",
     iconName: "Building2",
     color: "text-border-accent",
-    image: "../src/assets/projects/govindabra.png",
+    image: "../projects/govindabra.png",
   },
 ];
-
-export const MOBILE_PROJECT = {
-  id: "proj-electricity",
-  title: "Electricity Monitoring App",
-  category: "Mobile App",
-  tech: "Flutter / Dart",
-  description:
-    "IoT telemetric monitoring app built with Flutter and Dart for real-time power consumption metrics.",
-  detailedDescription:
-    "Aplikasi mobile pemantau konsumsi daya listrik berbasis IoT dengan visualisasi grafik beban daya per fase, peringatan batas anomali tegangan, dan estimasi tarif bulanan.",
-  url: "#",
-};
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
@@ -289,7 +277,7 @@ export const CERTIFICATIONS: Certification[] = [
       "Institutional certification for production web portal delivery.",
     credentialUrl: "#",
     icon: "Code2",
-    image: "",
+    image: "../certificates/sertifikat-lppm.webp",
   },
   {
     id: "cert-4",
@@ -324,5 +312,17 @@ export const CERTIFICATIONS: Certification[] = [
     credentialUrl: "#",
     icon: "Network",
     image: "../certificates/ICEEEIE.webp",
+  },
+  {
+    id: "cert-7",
+    credentialNumber: "Credential 07",
+    issuer: "Pegat Art Movie",
+    year: "2025",
+    title: "Guest Speaker - SMAN 1 Srengat",
+    description:
+      "Served as a guest speaker in an extracurricular activity at SMAN 1 Srengat.",
+    credentialUrl: "#",
+    icon: "Network",
+    image: "../certificates/sertifikat-pemateri.webp",
   },
 ];
