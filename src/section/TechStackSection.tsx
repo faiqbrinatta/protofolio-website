@@ -78,7 +78,7 @@ export const TechStackSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
-              className="h-[105px] flex flex-col items-center justify-center p-4 rounded-2xl bg-bg-card border border-border-subtle hover:border-border-accent/50 group shadow-sm hover:shadow-[0_0_20px_rgba(0,229,212,0.2)] transition-all cursor-default"
+              className="h-26.25 flex flex-col items-center justify-center p-4 rounded-2xl bg-bg-card border border-border-subtle hover:border-border-accent/50 group shadow-sm hover:shadow-[0_0_20px_rgba(0,229,212,0.2)] transition-all cursor-default"
             >
               <IconComponent
                 className={`w-7 h-7 ${iconColor} group-hover:scale-110 transition-transform duration-200`}

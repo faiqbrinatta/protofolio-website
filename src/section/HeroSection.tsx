@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import {
   ArrowRight,
   Download,
@@ -8,6 +9,101 @@ import {
   Mail,
 } from "lucide-react";
 import { PERSONAL_INFO } from "../data/portfolioData";
+
+const TypewriterName: React.FC = () => {
+  const firstName = "Fa'iq Zhafran";
+  const lastName = "Naufal Brinatta.";
+
+  const [firstText, setFirstText] = useState("");
+  const [lastText, setLastText] = useState("");
+  const [typingFirst, setTypingFirst] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const sleep = (ms: number) =>
+      new Promise<void>((resolve) => setTimeout(resolve, ms));
+
+    const typeText = async (
+      text: string,
+      setter: React.Dispatch<React.SetStateAction<string>>,
+      speed: number,
+    ) => {
+      for (let i = 1; i <= text.length; i++) {
+        if (cancelled) return;
+
+        setter(text.slice(0, i));
+        await sleep(speed);
+      }
+    };
+
+    const deleteText = async (
+      text: string,
+      setter: React.Dispatch<React.SetStateAction<string>>,
+      speed: number,
+    ) => {
+      for (let i = text.length; i >= 0; i--) {
+        if (cancelled) return;
+
+        setter(text.slice(0, i));
+        await sleep(speed);
+      }
+    };
+
+    const animate = async () => {
+      while (!cancelled) {
+        // Ketik nama pertama
+        setTypingFirst(true);
+        await typeText(firstName, setFirstText, 90);
+
+        // Pindah ke nama kedua
+        setTypingFirst(false);
+        await typeText(lastName, setLastText, 90);
+
+        // Tunggu
+        await sleep(1800);
+
+        // Hapus nama kedua
+        setTypingFirst(false);
+        await deleteText(lastName, setLastText, 60);
+
+        // Hapus nama pertama
+        setTypingFirst(true);
+        await deleteText(firstName, setFirstText, 60);
+
+        await sleep(500);
+      }
+    };
+
+    animate();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  return (
+    <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-text-primary tracking-tight font-extrabold uppercase leading-[1.1]">
+      <span>
+        {firstText}
+
+        {typingFirst && (
+          <span className="inline-block ml-1 w-0.5 h-[0.9em] bg-border-accent animate-pulse align-middle" />
+        )}
+      </span>
+
+      <br />
+
+      <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-secondary-fixed to-primary-container">
+        {lastText}
+
+        {!typingFirst && (
+          <span className="inline-block ml-1 w-0.5 h-[0.9em] bg-border-accent animate-pulse align-middle" />
+        )}
+      </span>
+    </h1>
+  );
+};
 
 export const HeroSection: React.FC = () => {
   return (
@@ -34,15 +130,7 @@ export const HeroSection: React.FC = () => {
             </span>
           </div>
 
-          {/* Main Heading */}
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-text-primary tracking-tight font-extrabold uppercase leading-[1.1]">
-            Fa'iq Zhafran
-            <br />
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-secondary-fixed to-primary-container">
-              Naufal Brinatta.
-            </span>
-          </h1>
-
+          <TypewriterName />
           {/* Subtitle */}
           <p className="font-display text-lg sm:text-xl text-text-secondary font-medium">
             {PERSONAL_INFO.role}

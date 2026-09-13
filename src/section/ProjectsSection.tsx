@@ -11,11 +11,7 @@ import {
   Building2,
 } from "lucide-react";
 import { GithubIcon } from "../components/common/Icons";
-import {
-  FEATURED_PROJECT,
-  OTHER_PROJECTS,
-  MOBILE_PROJECT,
-} from "../data/portfolioData";
+import { FEATURED_PROJECT, OTHER_PROJECTS } from "../data/portfolioData";
 import type { Project } from "../types/portfolio";
 import kayutanganImage from "../assets/kayutangan.png";
 
@@ -113,16 +109,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                 <span>[ View Details ]</span>
                 <ArrowRight className="ml-2 w-4 h-4" />
               </button>
-
-              <a
-                href={FEATURED_PROJECT.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-surface-container hover:text-border-accent text-text-primary transition-all font-sans text-xs sm:text-sm font-semibold border border-border-subtle"
-              >
-                <span>[ GitHub ]</span>
-                <GithubIcon className="ml-2 w-4 h-4" />
-              </a>
             </div>
           </div>
 
@@ -250,61 +236,47 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
 
                 {/* Link Action */}
                 <div className="flex items-center justify-between pt-1">
+                  {/* View Details */}
                   <button
                     onClick={() => onSelectProject(project)}
                     className="font-sans text-xs sm:text-sm text-border-accent hover:underline flex items-center gap-1 cursor-pointer font-medium"
                   >
                     <span>View Details</span>
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </button>
-                  <ExternalLink className="w-4 h-4 text-text-muted group-hover:text-border-accent transition-colors" />
+
+                  {/* External Links */}
+                  <div className="flex items-center gap-4">
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-sans text-xs text-text-muted hover:text-border-accent transition-colors"
+                      >
+                        <span>GitHub</span>
+                        <GithubIcon className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+
+                    {project.liveDemoUrl && (
+                      <a
+                        href={project.liveDemoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-sans text-xs text-text-muted hover:text-border-accent transition-colors"
+                      >
+                        <span>Live Demo</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>
           );
         })}
       </div>
-
-      {/* Extra Mobile App Project Callout */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="mt-6 bg-bg-card border border-border-subtle rounded-3xl p-6 sm:p-7 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md hover:border-border-accent/40 transition-colors"
-      >
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-2xl bg-surface-container border border-border-subtle flex items-center justify-center text-border-accent shrink-0 shadow-sm">
-            <Smartphone className="w-6 h-6" />
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <h4 className="font-display text-base sm:text-lg text-text-primary font-bold">
-                {MOBILE_PROJECT.title}
-              </h4>
-              <span className="px-2.5 py-0.5 rounded-full bg-surface-container-low border border-border-subtle text-border-accent font-mono text-[11px]">
-                {MOBILE_PROJECT.category}
-              </span>
-            </div>
-            <p className="font-sans text-xs sm:text-sm text-text-muted mt-1">
-              {MOBILE_PROJECT.description}
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-3 shrink-0 self-end md:self-center">
-          <span className="font-mono text-xs text-text-secondary px-3.5 py-1.5 rounded-full bg-surface-container border border-border-subtle">
-            {MOBILE_PROJECT.tech}
-          </span>
-          <a
-            href={MOBILE_PROJECT.url}
-            className="p-2.5 rounded-xl bg-surface-container hover:text-border-accent hover:bg-surface-container-high text-text-primary transition-colors border border-border-subtle"
-            aria-label="View Mobile Project"
-          >
-            <ExternalLink className="w-4 h-4" />
-          </a>
-        </div>
-      </motion.div>
     </section>
   );
 };

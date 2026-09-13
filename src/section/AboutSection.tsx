@@ -32,7 +32,7 @@ export const AboutSection: React.FC = () => {
               {PERSONAL_INFO.fullName}
             </h3>
             <p className="font-sans text-sm text-border-accent mt-1.5 font-medium">
-              Full Stack Web Developer
+              Fullstack Developer
             </p>
 
             <div className="w-full my-6 bg-surface-variant h-px" />

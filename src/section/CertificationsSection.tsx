@@ -1,8 +1,10 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
 import { CERTIFICATIONS } from "../data/portfolioData";
 
 export const CertificationsSection: React.FC = () => {
+  const [selectedCert, setSelectedCert] = useState<string | null>(null);
   return (
     <section
       id="certificate"
@@ -47,11 +49,17 @@ export const CertificationsSection: React.FC = () => {
               <div className="space-y-4">
                 {/* Preview Box */}
                 <div className="aspect-4/3 w-full rounded-2xl bg-surface-container-low border border-border-subtle/80 flex flex-col items-center justify-center p-4 text-center group-hover:border-border-accent/30 transition-colors">
-                  <img
-                    src={cert.image}
-                    alt="certificateIcon"
-                    className="w-full h-full mb-2.5 object-contain taransition-transform group-hover:scale-110"
-                  />
+                  <button
+                    type="button"
+                    onClick={() => setSelectedCert(cert.image)}
+                    className="w-full h-full cursor-zoom-in focus:outline-none"
+                  >
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="w-full h-full mb-2.5 object-contain transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </button>
                 </div>
 
                 <div>
@@ -70,6 +78,43 @@ export const CertificationsSection: React.FC = () => {
           );
         })}
       </div>
+      <AnimatePresence>
+        {selectedCert && (
+          <motion.div
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 cursor-zoom-out"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedCert(null)}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ duration: 0.25 }}
+              className="relative max-w-5xl max-h-[90vh] w-full flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                type="button"
+                onClick={() => setSelectedCert(null)}
+                className="absolute -top-3 -right-3 sm:top-0 sm:right-0 z-10 w-10 h-10 rounded-full bg-bg-card border border-border-subtle flex items-center justify-center text-text-primary hover:text-border-accent hover:border-border-accent transition-colors"
+                aria-label="Close preview"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              {/* Certificate Image */}
+              <img
+                src={selectedCert}
+                alt="Certificate preview"
+                className="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
