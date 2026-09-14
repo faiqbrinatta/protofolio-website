@@ -11,6 +11,7 @@ import { CertificationsSection } from "./section/CertificationsSection";
 import { ContactSection } from "./section/ContactSection";
 import { ProjectModal } from "./components/cards/ProjectModal";
 import type { Project } from "./types/portfolio";
+import Chatbot from "./components/chatbot/Chatbot";
 
 export const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -78,6 +79,7 @@ export const App: React.FC = () => {
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
       />
+      <Chatbot />
     </div>
   );
 };

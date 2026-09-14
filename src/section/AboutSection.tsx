@@ -7,7 +7,7 @@ export const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="w-full max-w-[1200px] mx-auto px-6 py-16 lg:py-24"
+      className="w-full max-w-300 mx-auto px-6 py-16 lg:py-24"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         {/* Left Column: Profile Quick Info Card (5 cols) */}
